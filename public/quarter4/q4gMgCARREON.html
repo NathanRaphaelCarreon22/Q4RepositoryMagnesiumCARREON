@@ -75,7 +75,6 @@ button{
 <label>Title:</label>
 <input id="title">
 
-
 <label>Year:</label>
 <input id="year">
 
@@ -117,7 +116,6 @@ star.classList.add("selected");
 }
 
 function addMovie(){
-
 let title = document.getElementById("title").value;
 let year = document.getElementById("year").value;
 let genre = document.getElementById("genre").value;
@@ -136,10 +134,13 @@ displayMovies();
 }
 
 function deleteMovie(index){
+let confirmDelete = confirm("Are you sure you want to delete this movie?");
+if(confirmDelete){
 let movies = JSON.parse(localStorage.getItem("movies")) || [];
-movies.splice(index,1); 
+movies.splice(index,1);
 localStorage.setItem("movies", JSON.stringify(movies));
 displayMovies();
+}
 }
 
 function displayMovies(){
@@ -153,20 +154,16 @@ movieList.innerHTML += `
 <div class="movie">
 ${movie.title} (${movie.year}) - ${movie.genre}, 
 Rating: <span style="color:gold">${stars}</span>
-
 <br><br>
-
 <button onclick="deleteMovie(${index})" style="background:red;">
 Delete
 </button>
-
 </div>
 `;
 });
 }
-
 displayMovies();
-</script>
 
+</script>
 </body>
 </html>
