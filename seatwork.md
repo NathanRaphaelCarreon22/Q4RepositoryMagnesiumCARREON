@@ -57,11 +57,15 @@
 
 - Guided Question: What changed compared to the default static positioning? Try to give different values to top and left or you can change it to bottom, right.
 
+- The position of the main content changes depending on the value on the top and left pixel values.
+
 ### Step 2 (Fixed):
 
 - Add in css ```position: fixed; bottom: 0; width: 100%;``` to .footer.
 
 - Guided Question: What happens when you scroll the page? Why does the footer behave differently from position relative?
+
+- You can't scroll on the page. The footer goes to the bottom when u make the valueof bottom equal to 0. 
 
 ### Step 3 (Absolute):
 
@@ -69,6 +73,7 @@
 
 - Guided Question: What is the effect of position: absolute on an element? How is it different from fixed?
 
+- Same as the step 1, the position changes to the value of the top and left. 
 ### Step 4 : (Absolute)
 
 - Add in html ```<div class="notice">Notice!</div>``` and include the css below:
@@ -88,17 +93,26 @@
 
 - Guided Question: Why does the notice appear on top of the content? What happens if you swap the z‑index values?
 
+- The notice appears on top of the content since the z index of the notice is higher than the z index of the content. When you swap it, the notice box goes under the content box. 
+
 - Challenge: 
     * What changes that you have to do on the code that will position .notice box on the top right corner of the .content box? Please write the code on paper as well (both html and css on the part of .notice and .content).
+    -  Change the top and right value so that it goes up. 
     * Try to change the position of .content to relative then to fixed. What do you observed each time?
+    - It also pushes it down since it is relative. 
     * What do you observe on about the effect of z-index on .notice and .content boxes?
+    - The one with the higher z-index will push the lower one down and pushes it under it. 
 
 3. Please answer the following reflection questions (15 minutes)
 
     a. Could you summarize the differences between the CSS position values (static, relative, absolute, fixed)? 
-
+- static - right bottom left 
+- relative - top right 
+- absolute it is relatie to the html elemnt
+- stiky headers
     b. How does absolute positioning depend on its parent element?
 
     c. How do you differentiate sticky from fixed (you can research on sticky)?
-
+sticky is like wen something is repeated
     d. If you were designing a webpage for a school event, how might you use positioning to highlight important information? Please give concrete examples.
+- z-index can be used for designs. 
