@@ -109,10 +109,13 @@
 - static - right bottom left 
 - relative - top right 
 - absolute it is relatie to the html elemnt
-- stiky headers
+- sticky headers
+
     b. How does absolute positioning depend on its parent element?
+- define the coordinate system
 
     c. How do you differentiate sticky from fixed (you can research on sticky)?
 sticky is like wen something is repeated
+
     d. If you were designing a webpage for a school event, how might you use positioning to highlight important information? Please give concrete examples.
 - z-index can be used for designs. 
